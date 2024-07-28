@@ -15,7 +15,6 @@ import {
   ViewContainer,
   FailureImg,
   RetryBtn,
-  ListContainer,
   HomeBottomContainer,
   SidebarContainer,
 } from '../Home/styledComponents'
@@ -29,7 +28,6 @@ import {
   Title,
   TitleSubscribe,
   Button,
-  BtnContainer,
 } from './styledComponents'
 
 const statusConstants = {
@@ -50,6 +48,7 @@ class VideoItemDetails extends Component {
   componentDidMount() {
     this.getvideoDetails()
   }
+
   getvideoDetails = async () => {
     const {match} = this.props
     const {params} = match
@@ -159,8 +158,7 @@ class VideoItemDetails extends Component {
     const {
       title,
       videoUrl,
-      thumbnailUrl,
-      name,
+      channelName,
       profileImageUrl,
       subscriberCount,
       viewsCount,
@@ -208,22 +206,22 @@ class VideoItemDetails extends Component {
                   </Views>
                 </BottomContainer>
                 <hr />
-                <Views direction={'row'}>
+                <Views direction="row">
                   <Profile src={profileImageUrl} alt="channel logo" />
-                  <Views direction={'column'}>
+                  <Views direction="column">
                     <Title
                       color={lightTheme ? '#000000' : '#ffffff'}
-                      size={'15px'}
+                      size="15px"
                     >
-                      {name}
+                      {channelName}
                     </Title>
                     <TitleSubscribe>{`${subscriberCount} Subscribers`}</TitleSubscribe>
                   </Views>
                 </Views>
                 <Title
                   color={lightTheme ? '#000000' : '#ffffff'}
-                  size={'15px'}
-                  ml={'60px'}
+                  size="15px"
+                  ml="60px"
                 >
                   {description}
                 </Title>

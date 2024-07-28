@@ -27,8 +27,6 @@ import ThemeContext from '../../Context/ThemeContext'
 import Header from '../Header'
 import SideBar from '../SideBar'
 import VideoItem from '../VideoItem'
-import Gaming from '../Gaming'
-import Trending from '../Trending'
 
 const statusConstants = {
   loading: 'LOADING',
@@ -79,6 +77,7 @@ class Home extends Component {
   onChangeInput = event => {
     this.setState({userInput: event.target.value})
   }
+
   onClickBtn = () => {
     this.getHomeVideos()
   }
@@ -156,13 +155,9 @@ class Home extends Component {
                   </RetryBtn>
                 </ViewContainer>
               ) : (
-                <ListContainer flexDirection={'row'}>
+                <ListContainer flexDirection="row">
                   {videosList.map(each => (
-                    <VideoItem
-                      key={each.id}
-                      videoDetails={each}
-                      from={'home'}
-                    />
+                    <VideoItem key={each.id} videoDetails={each} from="home" />
                   ))}
                 </ListContainer>
               )}
@@ -214,7 +209,7 @@ class Home extends Component {
                   <Button
                     type="button"
                     onClick={this.onClose}
-                    border={'none'}
+                    border="none"
                     data-testid="close"
                   >
                     <IoMdClose />
@@ -223,7 +218,7 @@ class Home extends Component {
                 <PremiumHead>
                   Buy Nxt Watch Premium prepaid plans with UPI
                 </PremiumHead>
-                <Button type="button" border={'1px solid #000000'}>
+                <Button type="button" border="1px solid #000000">
                   GET IT NOW
                 </Button>
               </PremiumContainer>

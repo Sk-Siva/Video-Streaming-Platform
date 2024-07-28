@@ -14,13 +14,12 @@ import {Span} from '../VideoItemDetails/styledComponents'
 import {TrendingItemContainer} from './styledComponents'
 
 const TrendingItem = props => {
-  const {videoDetails, from} = props
+  const {videoDetails} = props
   const {
     id,
     title,
     thumbnailUrl,
     channelName,
-    profileImageUrl,
     viewsCount,
     publishedAt,
   } = videoDetails

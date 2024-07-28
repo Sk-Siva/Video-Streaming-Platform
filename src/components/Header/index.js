@@ -13,12 +13,12 @@ import {
   LightTheme,
   DarkTheme,
   LogoutContainer,
-  HeaderListContainer,
   LogoutButton,
   LogoutButtonSm,
   HamburgerButton,
   SmallMenu,
   MenuItem,
+  BtnContainer,
 } from './styledComponents'
 
 import {
@@ -27,7 +27,6 @@ import {
   Trending,
   Gaming,
   SavedVideos,
-  Image,
 } from '../SideBar/styledComponents'
 
 import {LogoImage} from '../Login/styledComponents'
@@ -101,17 +100,18 @@ class Header extends Component {
                   <Button
                     type="button"
                     onClick={onclickLight}
-                    border={'none'}
-                    bgColor={'transparent'}
+                    all
+                    border="none"
+                    bgColor="transparent"
                     data-testid="theme"
                   >
                     {lightTheme ? <LightTheme /> : <DarkTheme />}
                   </Button>
                   <Button
                     type="button"
-                    border={'none'}
-                    bgColor={'transparent'}
-                    display={'none'}
+                    border="none"
+                    bgColor="transparent"
+                    display="block"
                   >
                     <Profile
                       src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"
@@ -161,7 +161,7 @@ class Header extends Component {
                         <LogoutButtonSm
                           type="button"
                           className="trigger-button"
-                          border={'none'}
+                          border="none"
                           color={lightTheme ? '#4f46e5' : '#ffffff'}
                         >
                           <IoIosLogOut
@@ -180,25 +180,29 @@ class Header extends Component {
                         <div>
                           <p>Are you sure, you want to logout?</p>
                         </div>
-                        <Button
-                          type="button"
-                          className="trigger-button"
-                          onClick={() => close()}
-                          border={'1px solid #cbd5e1'}
-                          color={'#cbd5e1'}
-                          bgColor={'transparent'}
-                        >
-                          Cancel
-                        </Button>
-                        <Button
-                          type="button"
-                          onClick={onLogout}
-                          color={'#ffffff'}
-                          bgColor={'#3b82f6'}
-                          border={'none'}
-                        >
-                          Confirm
-                        </Button>
+                        <BtnContainer>
+                          <Button
+                            type="button"
+                            className="trigger-button"
+                            onClick={() => close()}
+                            border="1px solid #cbd5e1"
+                            color="#cbd5e1"
+                            bgColor="transparent"
+                            all
+                          >
+                            Cancel
+                          </Button>
+                          <Button
+                            type="button"
+                            onClick={onLogout}
+                            color="#ffffff"
+                            bgColor="#3b82f6"
+                            border="none"
+                            all
+                          >
+                            Confirm
+                          </Button>
+                        </BtnContainer>
                       </LogoutContainer>
                     )}
                   </Popup>

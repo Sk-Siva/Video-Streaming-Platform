@@ -133,13 +133,9 @@ class Trending extends Component {
                 <h1>Trending</h1>
               </TrendingHead>
               <HomeBottomContainer>
-                <ListContainer flexDirection={'column'}>
+                <ListContainer flexDirection="column">
                   {trendingVideosList.map(each => (
-                    <TrendingItem
-                      key={each.id}
-                      videoDetails={each}
-                      from={'trending'}
-                    />
+                    <TrendingItem key={each.id} videoDetails={each} />
                   ))}
                 </ListContainer>
               </HomeBottomContainer>
@@ -149,6 +145,7 @@ class Trending extends Component {
       </ThemeContext.Consumer>
     )
   }
+
   getTrendingViews = () => {
     const {status} = this.state
     switch (status) {
@@ -162,6 +159,7 @@ class Trending extends Component {
         return null
     }
   }
+
   render() {
     return (
       <ThemeContext.Consumer>

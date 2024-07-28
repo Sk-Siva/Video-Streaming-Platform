@@ -1,4 +1,3 @@
-import React from 'react'
 import Header from '../Header'
 import SideBar from '../SideBar'
 import TrendingItem from '../TrendingItem'
@@ -10,7 +9,6 @@ import {
   HomeContainer,
   ViewContainer,
   FailureImg,
-  RetryBtn,
   ListContainer,
   HomeBottomContainer,
   SidebarContainer,
@@ -54,12 +52,12 @@ const SavedVideos = () => (
                       <h1>Saved Videos</h1>
                     </TrendingHead>
 
-                    <ListContainer flexDirection={'column'}>
+                    <ListContainer flexDirection="column">
                       {savedVideosList.map(each => (
                         <TrendingItem
                           key={each.id}
                           videoDetails={each}
-                          from={'trending'}
+                          from="trending"
                         />
                       ))}
                     </ListContainer>

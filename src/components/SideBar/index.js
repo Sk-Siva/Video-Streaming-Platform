@@ -62,19 +62,17 @@ class SideBar extends Component {
               <NavContainer>
                 {tabsList.map(each => (
                   <LinkEl to={`/${each.route}`} key={each.id}>
-                    <div>
-                      <SideButton
-                        currTab={currentTab === each.id}
-                        color={lightTheme ? '#000000' : '#ffffff'}
-                        type="button"
-                        onClick={() => this.onChangeTab(each.id)}
-                      >
-                        {each.logo({
-                          color: lightTheme ? '#000000' : '#ffffff',
-                        })}
-                        {each.text}
-                      </SideButton>
-                    </div>
+                    <SideButton
+                      currTab={currentTab === each.id}
+                      color={lightTheme ? '#000000' : '#ffffff'}
+                      type="button"
+                      onClick={() => this.onChangeTab(each.id)}
+                    >
+                      {each.logo({
+                        color: lightTheme ? '#000000' : '#ffffff',
+                      })}
+                      {each.text}
+                    </SideButton>
                   </LinkEl>
                 ))}
               </NavContainer>
