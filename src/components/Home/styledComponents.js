@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {device} from '../../BreakPoints/breakPoints'
 
 export const MainContainer = styled.div`
   display: flex;
@@ -13,7 +12,7 @@ export const HomeContainer = styled.div`
   margin-top: 73px;
   margin-right: 0px;
   width: 100%;
-  @media ${device.tablet} {
+  @media screen and (min-width: 768px) {
     margin-left: 250px;
   }
 `
@@ -94,7 +93,7 @@ export const ListContainer = styled.ul`
 `
 export const SidebarContainer = styled.div`
   display: none;
-  @media ${device.tablet} {
+  @media screen and (min-width: 768px) {
     display: block;
   }
 `

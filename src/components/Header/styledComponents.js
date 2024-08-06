@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import {FaMoon} from 'react-icons/fa'
 import {IoIosSunny} from 'react-icons/io'
-import {device} from '../../BreakPoints/breakPoints'
 
 export const HeaderContainer = styled.ul`
   list-style-type: none;
@@ -32,7 +31,8 @@ export const Button = styled.button`
   margin-left: 5px;
   display: ${props => (props.all ? 'block' : 'none')};
   margin-right: 5px;
-  @media ${device.tablet} {
+  }
+  @media screen and (min-width: 768px){
     display: ${props => props.display};
   }
 `
@@ -68,7 +68,7 @@ export const LogoutButton = styled.button`
   margin-left: 5px;
   margin-right: 5px;
   display: none;
-  @media ${device.tablet} {
+  @media screen and (min-width: 768px) {
     display: block;
   }
 `
@@ -82,7 +82,7 @@ export const LogoutButtonSm = styled.button`
   margin-left: 5px;
   margin-right: 5px;
   display: block;
-  @media ${device.tablet} {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `
@@ -92,7 +92,7 @@ export const HamburgerButton = styled.button`
   border: none;
   cursor: pointer;
   display: block;
-  @media ${device.tablet} {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `
@@ -108,7 +108,7 @@ export const SmallMenu = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: column;
-  @media ${device.tablet} {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `

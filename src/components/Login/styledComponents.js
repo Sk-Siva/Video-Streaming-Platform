@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {device} from '../../BreakPoints/breakPoints'
 
 export const LoginMainContainer = styled.div`
   background-color: ${props => props.bgColor};
@@ -23,7 +22,7 @@ export const LogoImage = styled.img`
   height: 50px;
   width: 200px;
   margin: 10px;
-  @media ${device.bgmobile} {
+  @media screen and (max-width: 767px) {
     height: 40px;
     width: 120px;
   }

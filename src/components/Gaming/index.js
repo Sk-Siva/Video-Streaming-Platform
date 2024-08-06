@@ -142,6 +142,7 @@ class Gaming extends Component {
       </ThemeContext.Consumer>
     )
   }
+
   getGamingViews = () => {
     const {status} = this.state
     switch (status) {
@@ -155,6 +156,7 @@ class Gaming extends Component {
         return null
     }
   }
+
   render() {
     return (
       <ThemeContext.Consumer>

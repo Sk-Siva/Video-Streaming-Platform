@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
-import {device} from '../../BreakPoints/breakPoints'
 
 export const LinkEl = styled(Link)`
   text-decoration: none;
@@ -26,7 +25,7 @@ export const VideoItemContainer = styled.div`
   height: 350px;
   width: 230px;
   margin: 20px;
-  @media ${device.smmobile} {
+  @media screen and (max-width: 575px) {
     margin: 0px;
   }
 `

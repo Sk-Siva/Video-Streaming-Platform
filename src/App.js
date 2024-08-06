@@ -19,6 +19,7 @@ class App extends Component {
   changeTheme = () => {
     this.setState(prevState => ({lightTheme: !prevState.lightTheme}))
   }
+
   addSavedVideos = video => {
     const {savedVideosList} = this.state
     const prevVideo = savedVideosList.find(each => each.id === video.id)

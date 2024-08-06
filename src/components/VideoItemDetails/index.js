@@ -47,6 +47,12 @@ class VideoItemDetails extends Component {
 
   componentDidMount() {
     this.getvideoDetails()
+
+    const liked = localStorage.getItem('liked') === 'true'
+    const disliked = localStorage.getItem('disliked') === 'true'
+    const saved = localStorage.getItem('saved') === 'true'
+
+    this.setState({liked, disliked, saved})
   }
 
   getvideoDetails = async () => {
@@ -132,23 +138,35 @@ class VideoItemDetails extends Component {
   )
 
   onLike = () => {
-    this.setState(prevState => ({
-      liked: !prevState.liked,
-      disliked: false,
-    }))
+    this.setState(prevState => {
+      const newLikedState = !prevState.liked
+      localStorage.setItem('liked', newLikedState)
+      return {
+        liked: newLikedState,
+        disliked: false,
+      }
+    })
   }
 
   onDisLike = () => {
-    this.setState(prevState => ({
-      disliked: !prevState.disliked,
-      liked: false,
-    }))
+    this.setState(prevState => {
+      const newDislikedState = !prevState.disliked
+      localStorage.setItem('disliked', newDislikedState)
+      return {
+        disliked: newDislikedState,
+        liked: false,
+      }
+    })
   }
 
   onSave = addSavedVideos => {
-    this.setState(prevState => ({
-      saved: !prevState.saved,
-    }))
+    this.setState(prevState => {
+      const newSavedState = !prevState.saved
+      localStorage.setItem('saved', newSavedState)
+      return {
+        saved: newSavedState,
+      }
+    })
     const {videoData} = this.state
     addSavedVideos(videoData)
   }

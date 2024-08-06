@@ -38,7 +38,7 @@ const VideoItem = props => {
                   <ProfileImage src={profileImageUrl} alt="channel logo" />
                   <div>
                     <p>{title}</p>
-                    <ProfileBottomContainer color={'#475569'}>
+                    <ProfileBottomContainer color="#475569">
                       <p>{channelName}</p>
                       <ViewsContainer>
                         <p>{viewsCount}</p>
