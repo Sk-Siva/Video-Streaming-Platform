@@ -68,6 +68,9 @@ export const LogoutButton = styled.button`
   margin-left: 5px;
   margin-right: 5px;
   display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
     display: block;
   }
@@ -82,6 +85,9 @@ export const LogoutButtonSm = styled.button`
   margin-left: 5px;
   margin-right: 5px;
   display: block;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
   @media screen and (min-width: 768px) {
     display: none;
   }

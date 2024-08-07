@@ -203,7 +203,7 @@ class VideoItemDetails extends Component {
                   <Views>
                     <Button type="button" active={liked} onClick={this.onLike}>
                       <AiOutlineLike />
-                      <p>Like</p>
+                      Like
                     </Button>
                     <Button
                       type="button"
@@ -211,7 +211,7 @@ class VideoItemDetails extends Component {
                       onClick={this.onDisLike}
                     >
                       <AiOutlineDislike />
-                      <p>DisLike</p>
+                      DisLike
                     </Button>
                     <Button
                       active={saved}
@@ -219,7 +219,7 @@ class VideoItemDetails extends Component {
                       onClick={() => this.onSave(addSavedVideos)}
                     >
                       <BiListPlus />
-                      <p>{saved ? 'Saved' : 'Save'}</p>
+                      {saved ? 'Saved' : 'Save'}
                     </Button>
                   </Views>
                 </BottomContainer>
