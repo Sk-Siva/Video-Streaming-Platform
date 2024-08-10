@@ -69,11 +69,11 @@ export const LogoutButton = styled.button`
   margin-right: 5px;
   display: none;
   @media screen and (max-width: 767px) {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
+		display: none;
+	}
+	@media screen and (min-width: 768px) {
+		display: block;
+	}
 `
 export const LogoutButtonSm = styled.button`
   background: transparent;
@@ -86,11 +86,11 @@ export const LogoutButtonSm = styled.button`
   margin-right: 5px;
   display: block;
   @media screen and (max-width: 767px) {
-    display: block;
-  }
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
+		display: block;
+	}
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
 `
 
 export const HamburgerButton = styled.button`
