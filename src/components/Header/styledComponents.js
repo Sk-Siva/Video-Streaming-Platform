@@ -59,16 +59,15 @@ export const LogoutContainer = styled.div`
   text-align: center;
 `
 export const LogoutButton = styled.button`
-  background: transparent;
-  border: ${props => props.border};
-  color: ${props => props.color};
-  padding: 5px;
-  background-color: ${props => props.bgColor};
-  border-radius: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  display: none;
-  @media screen and (max-width: 768px) {
+	background: transparent;
+	border: ${props => props.border};
+	color: ${props => props.color};
+	padding: 5px;
+	background-color: ${props => props.bgColor};
+	border-radius: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	@media screen and (max-width: 768px) {
 		display: none;
 	}
 	@media screen and (min-width: 768px) {
@@ -76,16 +75,15 @@ export const LogoutButton = styled.button`
 	}
 `
 export const LogoutButtonSm = styled.button`
-  background: transparent;
-  border: ${props => props.border};
-  color: ${props => props.color};
-  padding: 5px;
-  background-color: ${props => props.bgColor};
-  border-radius: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  display: block;
-  @media screen and (max-width: 768px) {
+	background: transparent;
+	border: ${props => props.border};
+	color: ${props => props.color};
+	padding: 5px;
+	background-color: ${props => props.bgColor};
+	border-radius: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	@media screen and (max-width: 768px) {
 		display: block;
 	}
 	@media screen and (min-width: 768px) {

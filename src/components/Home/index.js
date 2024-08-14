@@ -10,7 +10,7 @@ import {
   CloseContainer,
   ImgLogo,
   Button,
-  PremiumHead,
+  PremiumPara,
   HomeBottomContainer,
   Input,
   InputContainer,
@@ -215,9 +215,9 @@ class Home extends Component {
                     <IoMdClose />
                   </Button>
                 </CloseContainer>
-                <PremiumHead>
+                <PremiumPara>
                   Buy Nxt Watch Premium prepaid plans with UPI
-                </PremiumHead>
+                </PremiumPara>
                 <Button type="button" border="1px solid #000000">
                   GET IT NOW
                 </Button>

@@ -38,7 +38,7 @@ export const Button = styled.button`
   border-radius: 2px;
   background: transparent;
 `
-export const PremiumHead = styled.p`
+export const PremiumPara = styled.p`
   font-size: 20px;
 `
 export const HomeBottomContainer = styled.div`

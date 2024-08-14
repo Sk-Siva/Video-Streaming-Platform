@@ -126,8 +126,7 @@ class VideoItemDetails extends Component {
               alt="failure view"
             />
             <h1>Oops! Something Went Wrong</h1>
-            <p>We are having some trouble to complete your request.</p>
-            <p>Please try again</p>
+            <p>We are having some trouble to complete your request. Please try again.</p>
             <RetryBtn type="button" onClick={this.onRetry}>
               Retry
             </RetryBtn>
